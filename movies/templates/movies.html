@@ -24,30 +24,19 @@
         {% endfor %}
       </div>
     </div>
-
     <div class="col-9">
       <div class="row">
         {% for film in films %}
         <div class="col-4">
-          <div class="card mb-2" style="width: 18rem;">
-            <img src="{% static 'img/'|add:film.image %}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{ film.title }}</h5>
-              <p class="card-text">{{ film.description }}</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
 
-          </div>
+          {% include 'partials/_movie.html' %}
 
         </div>
         {% endfor %}
       </div>
-
     </div>
   </div>
 </div>
-
-
 </body>
 </html>
 
